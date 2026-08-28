@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mermaid Publishing"
+  short_description: "Prepare Mermaid diagrams for real publishing targets"
+  default_prompt: "Use $mermaid-publishing to prepare these diagrams for the target platform."

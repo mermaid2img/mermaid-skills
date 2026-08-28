@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mermaid Architecture Review"
+  short_description: "Review system boundaries and flows with Mermaid"
+  default_prompt: "Use $mermaid-architecture-review to map and review this system architecture."

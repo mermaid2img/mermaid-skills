@@ -1,0 +1,4 @@
+flowchart LR
+  Discover[Discover candidate from community] --> Audit[Audit source and maintenance] --> Install[Install in isolated workspace] --> Task[Run realistic Mermaid task] --> Render[Render preview] --> Inspect[Inspect readability and correctness] --> Decide{Material improvement?}
+  Decide -->|Yes| Describe[Write one-line value] --> Document[Add installation and source paths] --> Publish[Publish in Skill Hub]
+  Decide -->|No| Reject[Exclude or keep on watchlist]

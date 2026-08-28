@@ -1,0 +1,27 @@
+flowchart TD
+  Discover[Discover community candidate]
+
+  subgraph Evidence[1. Verify evidence]
+    Audit[Audit source and maintenance]
+    Feedback[Check real user feedback]
+  end
+
+  subgraph Practice[2. Practice]
+    Install[Install in isolation] --> Task[Run a realistic task]
+    Task --> Render[Render and inspect]
+  end
+
+  Decide{Material improvement?}
+
+  subgraph Curate[3. Curate]
+    Describe[Write one-line value] --> Document[Add install and source paths]
+    Document --> Publish[Publish in Skill Hub]
+  end
+
+  Discover --> Audit
+  Discover --> Feedback
+  Audit --> Install
+  Feedback --> Install
+  Render --> Decide
+  Decide -->|Yes| Describe
+  Decide -->|No| Reject[Exclude or watch]

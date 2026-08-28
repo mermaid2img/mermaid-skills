@@ -1,0 +1,15 @@
+flowchart LR
+  subgraph Device[User device — observed]
+    User([User]) --> Editor[Browser editor]
+    Editor --> Renderer[Local Mermaid renderer]
+    Renderer --> Preview[SVG preview]
+    Preview --> Export[PNG export]
+  end
+
+  Export --> Download[(Local download)]
+  Renderer -->|Parse failure| Error[Inline syntax error]
+  Error --> Editor
+
+  Publish{Publish externally?}
+  Download -. user-approved action .-> Publish
+  Publish -.->|Not part of local export| Remote[(Remote platform)]

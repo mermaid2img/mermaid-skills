@@ -1,0 +1,4 @@
+interface:
+  display_name: "Mermaid Preview Refinement"
+  short_description: "Render, inspect, and refine Mermaid diagrams visually"
+  default_prompt: "Use $mermaid-preview-refinement to improve this diagram for its target viewport."

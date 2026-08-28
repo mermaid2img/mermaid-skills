@@ -1,0 +1,10 @@
+flowchart TD
+  Source[Versioned Mermaid source] --> Render[Render with target version]
+  Render --> Check{Readable at mobile content width?}
+  Check -->|No| Refine[Shorten labels, regroup, or split]
+  Refine --> Render
+  Check -->|Yes| Export[Export PNG at 2x]
+  Export --> Inspect[Inspect the actual image]
+  Inspect --> Sync{Source and asset from same revision?}
+  Sync -->|No| Render
+  Sync -->|Yes| Ready([Ready for article draft])
